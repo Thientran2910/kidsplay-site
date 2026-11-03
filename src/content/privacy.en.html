@@ -1,0 +1,79 @@
+<p>KidsPlay is a learning-games app for children made by the KidsPlay team ("we"). This page explains in plain words what we store, what we send, and what we never do. Parents may want to read it together with an older child.</p>
+
+<h2>1. Summary</h2>
+<div class="card"><ul>
+<li>No ads. No third-party analytics or tracking tools.</li>
+<li>No accounts and no sign-in.</li>
+<li>Information about your child stays on your device and is not sent anywhere.</li>
+<li>Only "anonymous metrics" (not tied to a child or a device) are sent, and a parent can turn them off.</li>
+</ul></div>
+
+<h2>2. Data that stays on the device</h2>
+<p>The following is stored on your phone or tablet and is <strong>not sent by the app to us or anyone else</strong>:</p>
+<ul>
+<li>Child profiles: name or nickname, month and year of birth, age band, and the avatar you pick.</li>
+<li>Plays: which games your child played, at which level, and the result.</li>
+<li>Progress and mastery shown in the Parent Zone.</li>
+<li>Settings: language, play-time limit, eye-rest reminder and other parent choices.</li>
+</ul>
+<p>Note: if you use your operating system's device backup (iCloud Backup on iOS, Auto Backup on Android), the on-device data may be copied to your own iCloud or Google account (not ours) and restored when you reinstall the app.</p>
+
+<h2>3. Anonymous metrics (can be turned off)</h2>
+<p>To learn which games are too hard or too easy and improve them, when a play ends the app may send one small record containing exactly the following:</p>
+<ol>
+<li>Which game</li>
+<li>Which level</li>
+<li>Which stage</li>
+<li>Whether the child finished or gave up</li>
+<li>Play time in seconds</li>
+<li>Number of mistakes</li>
+<li>Number of hints used</li>
+<li>Number of steps taken</li>
+<li>Age band (for example 3-4 years, not a date of birth)</li>
+<li>App language</li>
+<li>App version</li>
+<li>Day played (date only, no time of day)</li>
+<li>Version number of the record format</li>
+</ol>
+<p>The record contains <strong>no</strong> name, photo, child ID, device ID, installation ID, email address or location. We cannot tell which child or device a record came from. (Section 4 describes technical information that Firebase services handle on their own, separate from these records.)</p>
+<ul>
+<li>If the device is offline, records are queued on the device and sent when a connection is available; records older than 30 days are dropped.</li>
+<li>A parent can turn this off in Parent Zone &rarr; Settings. Turning it off deletes the queue on the device immediately.</li>
+</ul>
+
+<h2>4. Content downloads and servers</h2>
+<p>New content packs (pictures, sounds, puzzles) are downloaded from Google Firebase servers. As with any internet service, the server sees the device's IP address when downloading; we do not use it to identify your child.</p>
+<p>We use Firebase App Check so that only the genuine app can download content and send anonymous metrics. App Check verifies the device and app through Google (Android) or Apple (iOS) and receives an attestation token; we do not use it to identify your child.</p>
+<p>The app fetches settings remotely (Firebase Remote Config, at most about every 12 hours) and downloads content. The Firebase SDKs the app uses (Remote Config, App Check, Storage, Firestore) rely on Firebase Installations, which creates a Firebase installation ID for each install, and send device and app metadata (operating system, app version, platform) and the IP address to Google, which processes it on our behalf. We do not attach this to anonymous metrics records and do not use it to identify your child. For how Google handles it, see <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+<p>We do not currently use automated crash reporting. If we turn on such a service in the future (for example Firebase Crashlytics), we will update this policy first.</p>
+
+<h2>5. What we do not do</h2>
+<ul>
+<li>We show no advertising.</li>
+<li>We use no third-party analytics or tracking tools.</li>
+<li>We do not track your child across other apps or websites.</li>
+<li>We do not sell data or share it for advertising.</li>
+<li>We do not ask you to create an account or sign in.</li>
+</ul>
+
+<h2>6. Purchases</h2>
+<p>When purchases (Family Subscription) become available, payment is handled by the App Store or Google Play; we never see or store your card details. We plan to use RevenueCat to manage subscription status; it receives transaction identifiers from the store, not information about your child. We will update this policy when that feature launches.</p>
+
+<h2>7. Children's privacy</h2>
+<p>KidsPlay is made for children, so we collect as little data as possible and follow children's privacy rules such as COPPA (United States), GDPR-K (European Union) and Decree 13/2023/ND-CP of Vietnam. Every purchase and every link that leaves the app sits behind a Parent Gate so children cannot open it on their own. We do not knowingly collect personal information from children.</p>
+
+<h2>8. Deleting data</h2>
+<ul>
+<li>In the app: Parent Zone &rarr; Settings &rarr; "Delete all data on this device" removes profiles, plays, progress, settings and downloaded content packs from the device.</li>
+<li>Uninstalling the app removes the data on the device. If you use device backup, your iCloud or Google account backup may still hold older data and restore it on reinstall; to delete everything, also delete that backup in your iCloud or Google settings.</li>
+<li>Because anonymous metrics are not tied to anyone, we cannot find and delete the records of a single device.</li>
+</ul>
+
+<h2>9. Where data is processed</h2>
+<p>Our server services run on Firebase (Google Cloud) in our project: the Firestore database is located in Southeast Asia (asia-southeast1) and file storage (Storage) in the United States. Anonymous metrics and content downloads may therefore be processed outside Vietnam.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>When we make changes we update this page and the date at the top. For important changes to how data is handled we will also notify you in the app.</p>
+
+<h2>11. Contact</h2>
+<p>Questions or requests about privacy: <a href="mailto:support@koka.vn">support@koka.vn</a>.</p>

@@ -1,0 +1,79 @@
+<p>KidsPlay là ứng dụng trò chơi học tập cho trẻ em do Nhóm phát triển KidsPlay (sau đây là "chúng tôi") làm ra. Trang này giải thích bằng lời đơn giản chúng tôi lưu gì, gửi gì và không làm gì. Phụ huynh nên đọc cùng với Bé nếu Bé đủ lớn.</p>
+
+<h2>1. Tóm tắt</h2>
+<div class="card"><ul>
+<li>Không quảng cáo. Không dùng công cụ phân tích hay theo dõi của bên thứ ba.</li>
+<li>Không có tài khoản, không đăng nhập.</li>
+<li>Thông tin về Bé nằm trên máy của bạn và không được gửi đi.</li>
+<li>Chỉ có "Số liệu ẩn danh" (không gắn với Bé hay thiết bị) được gửi đi, và Phụ huynh tắt được.</li>
+</ul></div>
+
+<h2>2. Dữ liệu chỉ nằm trên máy</h2>
+<p>Các dữ liệu sau được lưu ngay trên điện thoại hoặc máy tính bảng của bạn và <strong>app không gửi cho chúng tôi hay bất kỳ ai</strong>:</p>
+<ul>
+<li>Hồ sơ bé: tên hoặc biệt danh, tháng và năm sinh, nhóm tuổi, ảnh đại diện (avatar) do bạn chọn.</li>
+<li>Lượt chơi: Bé đã chơi trò nào, cấp độ nào, kết quả ra sao.</li>
+<li>Tiến độ và mức thành thạo hiển thị trong Khu phụ huynh.</li>
+<li>Cài đặt: ngôn ngữ, giới hạn thời gian chơi, nhắc nghỉ mắt và các lựa chọn khác của Phụ huynh.</li>
+</ul>
+<p>Lưu ý: nếu bạn bật sao lưu của hệ điều hành (iCloud Backup trên iOS, Auto Backup trên Android), dữ liệu trên máy có thể được sao lưu vào tài khoản iCloud hoặc Google của chính bạn (không phải của chúng tôi) và được khôi phục khi cài lại app.</p>
+
+<h2>3. Số liệu ẩn danh (có thể tắt)</h2>
+<p>Để biết trò nào quá khó hoặc quá dễ và sửa cho tốt hơn, khi Bé kết thúc một lượt chơi app có thể gửi một bản ghi nhỏ gồm đúng các thông tin sau:</p>
+<ol>
+<li>Trò chơi nào</li>
+<li>Cấp độ nào</li>
+<li>Màn chơi nào</li>
+<li>Bé hoàn thành hay bỏ dở</li>
+<li>Thời gian chơi (tính bằng giây)</li>
+<li>Số lần sai</li>
+<li>Số lần dùng gợi ý</li>
+<li>Số bước đã thực hiện</li>
+<li>Nhóm tuổi (ví dụ 3-4 tuổi, không phải ngày sinh)</li>
+<li>Ngôn ngữ của app</li>
+<li>Phiên bản app</li>
+<li>Ngày chơi (chỉ có ngày, không có giờ)</li>
+<li>Số phiên bản của định dạng bản ghi</li>
+</ol>
+<p>Bản ghi <strong>không có</strong> tên, ảnh, ID của Bé, ID thiết bị, ID cài đặt, địa chỉ email hay vị trí. Chúng tôi không thể biết bản ghi đến từ Bé hay thiết bị nào. (Phần 4 nêu thông tin kỹ thuật mà dịch vụ Firebase tự xử lý, tách khỏi các bản ghi này.)</p>
+<ul>
+<li>Nếu mất mạng, bản ghi được xếp hàng trên máy và gửi khi có mạng; bản ghi quá 30 ngày thì bị bỏ.</li>
+<li>Phụ huynh có thể tắt trong Khu phụ huynh &rarr; Cài đặt. Khi tắt, hàng đợi trên máy được xoá ngay.</li>
+</ul>
+
+<h2>4. Tải nội dung và dịch vụ máy chủ</h2>
+<p>Gói nội dung mới (tranh, âm thanh, câu đố) được tải từ máy chủ Firebase của Google. Khi tải, máy chủ nhìn thấy địa chỉ IP của thiết bị như mọi dịch vụ internet khác; chúng tôi không dùng thông tin này để nhận diện Bé.</p>
+<p>Chúng tôi dùng Firebase App Check để chỉ app thật mới được tải nội dung và gửi Số liệu ẩn danh. App Check xác nhận thiết bị và app thông qua Google (Android) hoặc Apple (iOS) và nhận một mã xác nhận; chúng tôi không dùng mã này để nhận diện Bé.</p>
+<p>App lấy cài đặt từ xa (Firebase Remote Config, tối đa khoảng 12 giờ một lần) và tải nội dung. Các SDK Firebase mà app dùng (Remote Config, App Check, Storage, Firestore) dùng Firebase Installations, tạo một mã cài đặt Firebase riêng cho mỗi lần cài app, và gửi cho Google (bên xử lý dữ liệu thay chúng tôi) thông tin thiết bị và app như hệ điều hành, phiên bản app, nền tảng, cùng địa chỉ IP. Chúng tôi không gắn các thông tin này vào Số liệu ẩn danh và không dùng chúng để nhận diện Bé. Chi tiết về cách Google xử lý: <a href="https://firebase.google.com/support/privacy">https://firebase.google.com/support/privacy</a></p>
+<p>Chúng tôi hiện không dùng dịch vụ báo lỗi tự động. Nếu sau này bật dịch vụ như vậy (ví dụ Firebase Crashlytics), chúng tôi sẽ cập nhật chính sách này trước.</p>
+
+<h2>5. Những gì chúng tôi không làm</h2>
+<ul>
+<li>Không hiển thị quảng cáo.</li>
+<li>Không dùng công cụ phân tích hoặc theo dõi của bên thứ ba.</li>
+<li>Không theo dõi Bé giữa các app hay website khác.</li>
+<li>Không bán hay chia sẻ dữ liệu cho mục đích quảng cáo.</li>
+<li>Không yêu cầu tạo tài khoản hay đăng nhập.</li>
+</ul>
+
+<h2>6. Mua hàng</h2>
+<p>Khi tính năng mua (Thuê bao gia đình) có mặt, việc thanh toán do App Store hoặc Google Play xử lý; chúng tôi không nhìn thấy và không lưu thông tin thẻ. Chúng tôi dự kiến dùng RevenueCat để quản lý trạng thái thuê bao; dịch vụ này nhận mã giao dịch từ cửa hàng chứ không nhận thông tin về Bé. Chúng tôi sẽ cập nhật chính sách này khi tính năng đó ra mắt.</p>
+
+<h2>7. Quyền riêng tư của trẻ em</h2>
+<p>KidsPlay dành cho trẻ em, nên chúng tôi thiết kế để thu thập ít dữ liệu nhất có thể và tuân theo các quy định về dữ liệu trẻ em như COPPA (Hoa Kỳ), GDPR-K (Liên minh châu Âu) và Nghị định 13/2023/NĐ-CP của Việt Nam. Mọi thao tác mua hàng và liên kết ra ngoài app đều nằm sau Cổng phụ huynh để Bé không tự bấm vào được. Chúng tôi không cố ý thu thập thông tin cá nhân của trẻ em.</p>
+
+<h2>8. Xoá dữ liệu</h2>
+<ul>
+<li>Trong app: Khu phụ huynh &rarr; Cài đặt &rarr; "Xoá toàn bộ dữ liệu trên máy" sẽ xoá hồ sơ, lượt chơi, tiến độ, cài đặt và các gói nội dung đã tải trên máy.</li>
+<li>Gỡ cài đặt app xoá dữ liệu trên máy. Nếu bạn đã bật sao lưu của hệ điều hành, bản sao lưu trong iCloud hoặc tài khoản Google của bạn có thể còn giữ dữ liệu cũ và khôi phục khi cài lại; để xoá hoàn toàn, hãy xoá cả bản sao lưu đó trong cài đặt iCloud hoặc Google.</li>
+<li>Vì Số liệu ẩn danh không gắn với ai nên chúng tôi không thể tìm lại và xoá riêng bản ghi của một thiết bị.</li>
+</ul>
+
+<h2>9. Nơi lưu trữ</h2>
+<p>Dịch vụ máy chủ chạy trên Firebase (Google Cloud) trong dự án của chúng tôi: cơ sở dữ liệu Firestore đặt tại Đông Nam Á (asia-southeast1) và kho tệp (Storage) đặt tại Hoa Kỳ. Vì vậy Số liệu ẩn danh và các lần tải nội dung có thể được xử lý ngoài Việt Nam.</p>
+
+<h2>10. Thay đổi chính sách</h2>
+<p>Khi có thay đổi, chúng tôi cập nhật trang này và ghi ngày ở đầu trang. Với thay đổi quan trọng về dữ liệu, chúng tôi sẽ thông báo trong app.</p>
+
+<h2>11. Liên hệ</h2>
+<p>Câu hỏi hoặc yêu cầu về quyền riêng tư: <a href="mailto:support@koka.vn">support@koka.vn</a>.</p>
