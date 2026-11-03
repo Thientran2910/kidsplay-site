@@ -39,7 +39,7 @@ BOOT = ("<script>(function(){var d=document.documentElement,s=null;try{s=window.
         "l=l==='en'?'en':'vi';d.setAttribute('data-lang',l);d.setAttribute('data-mode',m);d.lang=l;})();</script>")
 
 SUPPORT_EMAIL = 'support@koka.vn'
-UPDATED = {'vi': 'Cập nhật 01/11/2026', 'en': 'Updated 01/11/2026'}
+UPDATED = {'vi': 'Cập nhật 03/11/2026', 'en': 'Updated 03/11/2026'}
 
 NAV = [('home', 'HOME', 'Home', 'Trang chủ'), ('support', 'SUPPORT', 'Support', 'Hỗ trợ'),
        ('privacy', 'PRIVACY', 'Privacy', 'Quyền riêng tư'), ('terms', 'TERMS', 'Terms', 'Điều khoản')]
