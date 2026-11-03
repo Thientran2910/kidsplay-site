@@ -8,9 +8,9 @@
   --line-2: #e4d0a8;
   --fg: #1f2a44;
   --fg-2: #3d4a68;
-  --muted: #66718a;
-  --accent: #1e7fd6;
-  --accent-2: #3ba7f5;
+  --muted: #5a657d;
+  --accent: #1769b8;
+  --accent-2: #0f4f94;
   --accent-ink: #ffffff;
   --accent-soft: rgba(59, 167, 245, 0.14);
   --sun: #ffc93c;
@@ -53,7 +53,7 @@
 :root[data-lang="en"] .vi { display: none !important; }
 
 * { box-sizing: border-box; }
-html { overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+html { background: var(--bg); overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
   font: 400 var(--step-0)/1.7 var(--font-body);

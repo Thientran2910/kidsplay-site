@@ -20,9 +20,9 @@
   --line-2: #e4d0a8;
   --fg: #1f2a44;
   --fg-2: #3d4a68;
-  --muted: #66718a;
-  --accent: #1e7fd6;
-  --accent-2: #3ba7f5;
+  --muted: #5a657d;
+  --accent: #1769b8;
+  --accent-2: #0f4f94;
   --accent-ink: #ffffff;
   --accent-soft: rgba(59, 167, 245, 0.14);
   --sun: #ffc93c;
@@ -65,7 +65,7 @@
 :root[data-lang="en"] .vi { display: none !important; }
 
 * { box-sizing: border-box; }
-html { overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
+html { background: var(--bg); overflow-x: clip; -webkit-text-size-adjust: 100%; scroll-padding-top: 88px; }
 body {
   margin: 0; background: var(--bg); color: var(--fg);
   font: 400 var(--step-0)/1.7 var(--font-body);
@@ -178,13 +178,14 @@ img { max-width: 100%; }
 .app-card img { width: 160px; height: 160px; border-radius: 36px; box-shadow: 0 14px 30px -12px rgba(31, 42, 68, 0.45); display: block; }
 .app-card b { font: 800 1.75rem/1 var(--font-display); }
 .app-card span.sub { color: var(--muted); font-size: var(--step--1); }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 40px; }
+.hero .wrap.stats-wrap { grid-template-columns: 1fr; padding-block: 24px 0; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+@media (min-width: 720px) { .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; } }
 .stats div { display: grid; gap: 2px; padding: 14px 16px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); }
 .stats b { font: 800 1.5rem/1.2 var(--font-display); color: var(--accent); }
 .stats span { color: var(--muted); font-size: var(--step--1); }
 
-.games { display: grid; grid-template-columns: 1fr; gap: 14px; }
-@media (min-width: 560px) { .games { grid-template-columns: repeat(2, 1fr); } }
+.games { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 @media (min-width: 960px) { .games { grid-template-columns: repeat(4, 1fr); } }
 .game { padding: 22px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); display: grid; gap: 10px; align-content: start; min-width: 0; }
 .game .num { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; font: 800 1.25rem/1 var(--font-display); color: #1f2a44; }
